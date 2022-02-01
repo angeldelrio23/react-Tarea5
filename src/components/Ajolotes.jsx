@@ -7,7 +7,6 @@ class Ajolotes extends React.Component {
     super(props);
     this.state = {
       tableData: [],
-      /*selectedItem: '',*/
       url: '',
       facts: '',
       pics_repo: '',
@@ -31,9 +30,6 @@ class Ajolotes extends React.Component {
     const responseData = await response.json();
     this.setState({
       tableData: responseData['photos'],
-      /*selectedItem: responseData['photos'][0], 
-      Para Card se obtienen los elementos específicos, para poder coger de los arrays del elemento
-      (por ejemplo de cámara)*/
       url: responseData['photos'][0].url,
       facts: responseData['photos'][0].facts,
       api_repo: responseData['photos'][0].api_repo,
@@ -66,6 +62,15 @@ class Ajolotes extends React.Component {
                   })}
                 </tbody>
               </Table>
+            </Col>
+            <Col lg={4} md={8}>
+              <Card style={{ width: '18rem' }}>
+                <Card.Body>
+                  <Card.Title>Facts ajolotes: {this.state.facts}</Card.Title>
+                  <Card.Text>Foto:</Card.Text>
+                  <Card.Img src={this.state.url}></Card.Img>
+                </Card.Body>
+              </Card>
             </Col>
           </Row>
         </Container>
