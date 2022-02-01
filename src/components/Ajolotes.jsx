@@ -29,11 +29,11 @@ class Ajolotes extends React.Component {
     );
     const responseData = await response.json();
     this.setState({
-      tableData: responseData['photos'],
-      url: responseData['photos'][0].url,
-      facts: responseData['photos'][0].facts,
-      api_repo: responseData['photos'][0].api_repo,
-      pics_repo: responseData['photos'][0].pics_repo,
+      tableData: responseData['axolotl.py-api'],
+      url: responseData['axolotl.py-api'][0].url,
+      facts: responseData['axolotl.py-api'][0].facts,
+      api_repo: responseData['axolotl.py-api'][0].api_repo,
+      pics_repo: responseData['axolotl.py-api'][0].pics_repo,
     });
   }
 
