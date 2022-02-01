@@ -2,7 +2,6 @@ import Home from '../components/Home';
 import { PaginaListas } from '../components/PaginaListas';
 import Perfil from '../components/Perfil';
 import Juegos from '../components/Juegos';
-import PelisGhibli from '../components/PelisGhibli';
 
 export const MenuItems = [
   {
@@ -28,12 +27,6 @@ export const MenuItems = [
     path: '/Juegos',
     title: 'Juegos',
     component: Juegos,
-  },
-  {
-    id: 5,
-    path: '/PelisGhibli',
-    title: 'PelisGhibli',
-    component: PelisGhibli,
   },
 ];
 
